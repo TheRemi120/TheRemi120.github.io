@@ -3,6 +3,30 @@
 
 <head>
 
+    <style>
+    .callout {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 400px;
+        background: url(img/callout.jpg) no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+
+    .callout .text-vertical-center {
+        width: 50%;
+        padding-right: 50px;
+        color: white; /* Added this line to make the text white */
+    }
+
+    .text-right {
+        text-align: right;
+    }
+</style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <meta http-equiv='cache-control' content='no-cache'> 
@@ -168,7 +192,7 @@
 
 <!-- Callout -->
 <aside class="callout">
-    <div class="text-vertical-center">
+    <div class="text-vertical-center text-right">
         <h1>"The only way to do great work is to love what you do". Steve Jobs</h1>
     </div>
 </aside>
