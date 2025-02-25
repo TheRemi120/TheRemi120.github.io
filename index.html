@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rémi AL AJROUDI - AI Researcher & Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .portfolio-item {
+            height: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-content {
+            padding: 2rem;
+        }
+        
+        .portfolio-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1D809F;
+        }
+        
+        .portfolio-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: #f8f9fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #1D809F;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: #1D809F;
+            color: white;
+        }
+
+        .portfolio-item.large {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .portfolio-item.large {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top">Rémi AL AJROUDI</a>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#portfolio">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Rémi AL AJROUDI</h1>
+            <h3>AI Researcher & Engineer | ENS Paris-Saclay</h3>
+            <a href="#about" class="btn btn-primary">Discover My Work</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Bridging the gap between theoretical AI research and practical applications</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p class="lead">Master's student at ENS Paris-Saclay, I combine rigorous mathematical foundations with hands-on engineering expertise to push the boundaries of artificial intelligence. My research focuses on developing innovative AI solutions that address real-world challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas of Expertise</h2>
+                <p>Specialized knowledge in AI, mathematics, and engineering</p>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Artificial Intelligence & Mathematics</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-brain fa-2x mb-3" style="color: var(--secondary-color)"></i>
+                        <h4>Machine Learning</h4>
+                        <p>Deep learning, reinforcement learning, and neural networks with focus on theoretical foundations and practical implementations.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-network fa-2x mb-3" style="color: var(--secondary-color)"></i>
+                        <h4>Complex Systems</h4>
+                        <p>Analysis and modeling of chaotic dynamics, with expertise in reservoir computing and time series prediction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Engineering & Research</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-microchip fa-2x mb-3" style="color: var(--secondary-color)"></i>
+                        <h4>Hardware Integration</h4>
+                        <p>Development of embedded systems and integration of AI algorithms with hardware components.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-flask fa-2x mb-3" style="color: var(--secondary-color)"></i>
+                        <h4>Research Methodology</h4>
+                        <p>Experience in designing experiments, analyzing results, and publishing findings in academic contexts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research Projects</h2>
+                <p>A selection of my most significant contributions to AI and engineering</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Audio Processing -->
+                <div class="portfolio-item large">
+                    <img class="img-fluid" src="img/portfolio-5.png" alt="Audio Signal Processing">
+                    <div class="portfolio-content">
+                        <h4>Optimizing Convolutional Dictionary Learning at Scale</h4>
+                        <p><em>Developed a scalable framework for audio processing achieving 98.95% compression while maintaining high signal quality. Reduced memory usage from 132GB to 4MB through innovative sparse coding techniques.</em></p>
+                        <div class="tech-tags">
+                            <span class="tag">Signal Processing</span>
+                            <span class="tag">Iterative Optimization</span>
+                            <span class="tag">Scientific Computing</span>
+                        </div>
+                        <a href="project2.html" class="btn btn-primary">View Research</a>
+                    </div>
+                </div>
+
+                <!-- Bifurcation -->
+                <div class="portfolio-item">
+                    <img class="img-fluid" src="img/portfolio-1.jpg" alt="Bifurcation Research">
+                    <div class="portfolio-content">
+                        <h4>Bifurcation Embedding in Chaotic Dynamics</h4>
+                        <p><em>Novel approach to chaos analysis using topological data analysis</em></p>
+                        <div class="tech-tags">
+                            <span class="tag">Topology</span>
+                            <span class="tag">Chaos Theory</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <a href="project1.html" class="btn btn-primary">View Research</a>
+                    </div>
+                </div>
+
+                <!-- ML Pipeline -->
+                <div class="portfolio-item">
+                    <img src="img/portfolio-2.jpg" alt="ML Pipeline">
+                    <div class="portfolio-content">
+                        <h4>ML Pipeline for Gait Analysis</h4>
+                        <p>AI system for analyzing movement patterns in patients</p>
+                        <div class="tech-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Signal Processing</span>
+                            <span class="tag">Healthcare</span>
+                        </div>
+                        <a href="project4.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Temperature Control -->
+                <div class="portfolio-item">
+                    <img src="img/portfolio-3.jpg" alt="Temperature Control">
+                    <div class="portfolio-content">
+                        <h4>Intelligent Temperature Control</h4>
+                        <p>Advanced control systems using Peltier cells</p>
+                        <div class="tech-tags">
+                            <span class="tag">Control Systems</span>
+                            <span class="tag">Electronics</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                        <a href="project5.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            
+                <!-- Parallel Image Processing -->
+                <div class="portfolio-item">
+                    <img src="img/portfolio-4.jpg" alt="Image Processing">
+                    <div class="portfolio-content">
+                        <h4>Parallel Image Processing</h4>
+                        <p>High-performance image processing pipeline using CUDA</p>
+                        <div class="tech-tags">
+                            <span class="tag">CUDA</span>
+                            <span class="tag">Parallel Computing</span>
+                            <span class="tag">C++</span>
+                        </div>
+                        <a href="project3.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Interested in collaboration or have questions about my research?</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="contact-info text-center mb-5">
+                        <a href="mailto:remi.al_ajroudi@ens-paris-saclay.fr" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="https://www.linkedin.com/in/remi-al-ajroudi/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+            <p class="mb-3">
+                <a href="mailto:remi.al_ajroudi@ens-paris-saclay.fr">remi.al_ajroudi@ens-paris-saclay.fr</a>
+            </p>
+            <p>&copy; 2025 Rémi AL AJROUDI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    // Menu Toggle Script
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+</body>
+</html>

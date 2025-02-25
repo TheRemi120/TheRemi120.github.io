@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bifurcation Embedding Project - Rémi AL AJROUDI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <style>
+        .project-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+        }
+
+        .project-section {
+            margin-bottom: 3rem;
+        }
+
+        .project-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-badge {
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .project-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            max-width: 100%;
+        }
+
+        .key-features {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .key-features li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .key-features li i {
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        .btn-group {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-group .btn {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-group .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-group .btn i {
+            font-size: 1.2rem;
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .methodology-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .methodology-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a href="index.html" class="btn btn-dark btn-lg" style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1>Bifurcation Embedding in Chaotic Dynamics</h1>
+                    <p class="lead">Exploring Complex Systems through Reservoir Computing at the University of Tokyo</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Chaos Theory</span>
+                        <span class="tech-badge">Reservoir Computing</span>
+                        <span class="tech-badge">Scientific Computing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <!-- Overview -->
+                    <div class="project-section">
+                        <h3>Project Overview</h3>
+                        <p>During my M1 internship at the University of Tokyo, I developed an innovative approach to analyze and predict chaotic dynamics using Reservoir Computing. The project focused on embedding bifurcation diagrams through Echo State Networks (ESN), achieving remarkable results in predicting complex system behaviors with minimal training data.</p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="project-section">
+                        <h3>Key Achievements</h3>
+                        <div class="key-features">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>Successfully implemented an Echo State Network capable of reproducing logistic map dynamics and predicting bifurcation patterns</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>Achieved accurate prediction of chaos-order transitions using only 4 training points through optimized hyperparameter tuning</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>Developed an object-oriented Python implementation with dedicated ESN and RidgeReadout classes</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>Extended the research to practical applications in soft robotics through collaboration with Bridgestone's R&D</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Methodology -->
+                    <div class="project-section">
+                        <h3>Methodology</h3>
+                        <div class="methodology-grid">
+                            <div class="methodology-item">
+                                <h4>Echo State Network Design</h4>
+                                <p>Implemented a reservoir computing approach using carefully tuned ESNs to capture complex dynamical patterns</p>
+                            </div>
+                            <div class="methodology-item">
+                                <h4>Hyperparameter Optimization</h4>
+                                <p>Fine-tuned spectral radius, input scaling, and leakage rate for optimal performance</p>
+                            </div>
+                            <div class="methodology-item">
+                                <h4>Ridge Regression</h4>
+                                <p>Employed ridge regression for robust readout layer training with regularization</p>
+                            </div>
+                            <div class="methodology-item">
+                                <h4>Validation Framework</h4>
+                                <p>Developed comprehensive testing procedures for both interpolation and extrapolation tasks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="project-section">
+                        <h3>Technical Implementation</h3>
+                        <p>The project was implemented in Python, following object-oriented programming principles. Key technical aspects include:</p>
+                        <ul>
+                            <li>Custom ESN class with configurable reservoir parameters</li>
+                            <li>Ridge regression implementation for readout layer optimization</li>
+                            <li>Comprehensive hyperparameter management system</li>
+                            <li>Efficient data processing pipeline for time series analysis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Impact and Applications -->
+                    <div class="project-section">
+                        <h3>Impact and Applications</h3>
+                        <p>This research bridges the gap between theoretical chaos theory and practical applications in:</p>
+                        <ul>
+                            <li>Soft robotics control systems</li>
+                            <li>Predictive modeling of complex systems</li>
+                            <li>Pattern recognition in chaotic time series</li>
+                            <li>Physical reservoir computing applications</li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="btn-group">
+                        <a href="reports/M1Tokyo/fullReportTokyoInternshipM1.pdf" class="btn btn-primary" target="_blank" download>
+                            <i class="fas fa-file-pdf"></i> Read Full Report
+                        </a>
+                        <a href="https://github.com/TheRemil20/Tokyo_2024_Internship" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="https://www.linkedin.com/in/remi-al-ajroudi/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+            <p class="mb-3">
+                <a href="mailto:remi.al_ajroudi@ens-paris-saclay.fr">remi.al_ajroudi@ens-paris-saclay.fr</a>
+            </p>
+            <p>&copy; 2025 Rémi AL AJROUDI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

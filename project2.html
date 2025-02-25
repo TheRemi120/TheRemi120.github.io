@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Large-Scale CDL for Audio Processing - Rémi AL AJROUDI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <style>
+        .project-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .project-content {
+            padding: 4rem 0;
+        }
+
+        .project-section {
+            margin-bottom: 3rem;
+        }
+
+        .project-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-badge {
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .project-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            max-width: 100%;
+        }
+
+        .key-features {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .key-features li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .key-features li i {
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        .btn-group {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-group .btn {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-group .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-group .btn i {
+            font-size: 1.2rem;
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .methodology-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .methodology-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        footer .list-inline {
+            margin-bottom: 2rem;
+        }
+
+        footer .list-inline-item {
+            margin: 0 1rem;
+        }
+
+        footer .list-inline-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .list-inline-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        footer .list-inline-item i {
+            font-size: 1.2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+        }
+
+        .metric-card .label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .benchmark-details {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .benchmark-details h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benchmark-details ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benchmark-details li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benchmark-details li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a href="index.html" class="btn btn-dark btn-lg" style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1>Optimizing Convolutional Dictionary Learning at Scale</h1>
+                    <p class="lead">Scalable Framework for Multivariate Time Series Applied to Audio Processing</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Signal Processing</span>
+                        <span class="tech-badge">Iterative Optimization</span>
+                        <span class="tech-badge">Scientific Computing</span>
+                        <span class="tech-badge">Memory Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <!-- Objectives -->
+            <div class="project-section">
+                <h3>Project Objectives</h3>
+                <p>Development of an innovative Convolutional Dictionary Learning (CDL) framework capable of processing large-scale audio datasets while significantly reducing computational complexity and memory footprint. The framework aims to enable real-time audio processing through efficient sparse coding and dictionary learning algorithms.</p>
+            </div>
+
+            <!-- Methodology -->
+            <div class="project-section">
+                <h3>Methodology</h3>
+                <div class="methodology-grid">
+                    <div class="methodology-item">
+                        <h4>Linear Operators Framework</h4>
+                        <p>Implemented implicit matrix operations using LinearOperators to avoid explicit matrix construction, reducing memory usage from 132GB to 4MB for 2-hour audio signals. This approach enables efficient computation of convolution and correlation operations without storing large matrices.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Iterative Solvers</h4>
+                        <p>Developed optimized Conjugate Gradient and BiCGStab solvers for the sparse coding problem, achieving a 17.6x speedup through JIT compilation. The solvers efficiently handle the optimization problem: min½‖Y - D*Z‖₂² + λ‖Z‖₁.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Sparsity Exploitation</h4>
+                        <p>Leveraged the high sparsity of activation matrices (99% zeros) through intelligent encoding and sparse operations, enabling efficient storage and computation while maintaining signal quality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="project-section">
+                <h3>Key Results</h3>
+                <div class="results-grid">
+                    <div class="metric-card">
+                        <div class="value">98.95%</div>
+                        <div class="label">Compression Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="value">51.6 dB</div>
+                        <div class="label">PSNR</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="value">105</div>
+                        <div class="label">SI-SDR Score</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="value">17.6x</div>
+                        <div class="label">Speed Improvement</div>
+                    </div>
+                </div>
+                <div class="benchmark-details mt-4">
+                    <h4>Performance Analysis</h4>
+                    <ul>
+                        <li>Systematic benchmarking of solvers (CG vs BiCGStab vs GMRES) under varying conditions</li>
+                        <li>Optimization of hyperparameters: atom length (Td=5-1000), number of atoms (2-20), and sparsity levels</li>
+                        <li>Validation on ESC-50 dataset with state-of-the-art compression results</li>
+                        <li>Successful deployment tests on resource-constrained devices (Raspberry Pi 5)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="project-section">
+                <h3>Technical Skills & Tools</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Signal Processing</span>
+                    <span class="tech-badge">Iterative Optimization</span>
+                    <span class="tech-badge">Object-Oriented Programming</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">SciPy</span>
+                    <span class="tech-badge">Memory Optimization</span>
+                    <span class="tech-badge">Numba</span>
+                </div>
+            </div>
+
+            <!-- Innovation & Impact -->
+            <div class="project-section">
+                <h3>Innovation & Impact</h3>
+                <div class="key-features">
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>Pioneered a scalable and reproducible solution for audio processing that can be extended to other domains</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>Enabled real-time processing capabilities through significant memory and computational optimizations</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>Developed a modular framework that can be easily adapted for various time series applications</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>Achieved state-of-the-art compression rates while maintaining high signal quality</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="btn-group">
+                <a href="reports/AriaBorelli/fullReportAriaBorelli.pdf" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-file-pdf"></i>
+                    View Full Report
+                </a>
+                <a href="https://github.com/TheRemi120/SparseCDL" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/remi-al-ajroudi/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="mailto:remi.alajroudi@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/TheRemi120" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0"> 2025 Rémi AL AJROUDI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+</body>
+</html>
